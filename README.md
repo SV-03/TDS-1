@@ -31,7 +31,7 @@ DETAILS:
 
 - Data was scraped from the GitHub API based on users in Austin with over 100 followers and includes their public repositories.Details shared below.
 
-  The script written for scraping, effectively automates the data scraping process from GitHub's API, targeting specific users based on location and follower count. By structuring the data retrieval into distinct functions, it makes the script modular and easier to maintain. The end result is two well-organized CSV files that provide valuable insights into GitHub users in Austin, their profile details, and their public repositories.
+The script written for scraping, effectively automates the data scraping process from GitHub's API, targeting specific users based on location and follower count. By structuring the data retrieval into distinct functions, it makes the script modular and easier to maintain. The end result is two well-organized CSV files that provide valuable insights into GitHub users in Austin, their profile details, and their public repositories.
 
 This script was designed to scrape user and repository data from GitHub's API, specifically targeting users located in Austin with more than 100 followers. It gathers user information and their associated public repositories, ultimately saving this data into two CSV files for later analysis.
 
@@ -66,11 +66,12 @@ Each function opens a specified file in write mode and utilizes csv.DictWriter t
 The user data is saved in users.csv, while the repository data is saved in repositories.csv.
 Main Execution Logic:
 
-Finally the main function orchestrates the script's execution:
+4. Finally the main function orchestrates the script's execution:
 
 It calls the fetch_users function to retrieve user data and saves it to a CSV file.
 It then iterates over each fetched user, calling fetch_repositories to get their repository data and accumulating this information in a combined list.
 Finally, it saves the combined repository data to a separate CSV file.
+
 Rate Limiting:
 
 The script includes a time.sleep(1) call after each API request to avoid hitting GitHub's API rate limits. This ensures that the script runs smoothly without overwhelming the server.
